@@ -41,19 +41,34 @@
     transition: opacity 0.3s ease; /* Smooth fade-in effect */
 }
 
-.gallery-item:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
 }
 
-.buy-now {
-    background-color: #ff5722; /* Button color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth color change */
+.media--hover-effect {
+    position: relative;
 }
 
-.buy-now:hover {
-    background-color: #e64a19; /* Darker shade on hover */
+.main-image,
+.hover-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.media--hover-effect:hover .hover-image {
+    opacity: 1; /* Show on hover */
+}
+
+.media--hover-effect:hover .main-image {
+    opacity: 0; /* Hide main image on hover */
 }
