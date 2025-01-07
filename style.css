@@ -196,7 +196,7 @@ img {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0 , 0, 0, 0.1);
 }
 
 .feature-item h3 {
@@ -235,4 +235,34 @@ img {
 
 .social-icons img:hover {
     transform: scale(1.1);
+}
+
+/* Add your media query here */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-button {
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .gallery h2, .features h2 {
+        font-size: 28px;
+    }
 }
