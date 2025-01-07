@@ -38,7 +38,7 @@
         <h2>Product Gallery</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://cdn.shopify.com/s/files/1/0512/3489/8105/files/605C_bfa82228-f31c-4184-9223-9b4ad3bbc5fb.jpg?v=1682668814&width=2000&height=2000&crop=center" alt="Govee Light 1">
+                <img src="https://cdn.shopify.com/s/files/1/0512/3489/8105/files/605C_bfa82228-f31c-4184-9223-9b4ad3bbc5fb.jpg?v=1682668814&width=200 0&height=2000&crop=center" alt="Govee Light 1">
                 <div class="overlay">
                     <p>Govee Smart LED Strip</p>
                     <button class="buy-now">Buy Now</button>
@@ -90,33 +90,6 @@
         </div>
     </footer>
 
-    <script>
-        // JavaScript for the carousel functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slides .slide');
-        const prevButton = document.getElementById('prev-btn');
-        const nextButton = document.getElementById('next-btn');
-
-        function changeSlide() {
-            slides.forEach((slide, index) => {
-                slide.classList.remove('active');
-                if (index === currentSlide) {
-                    slide.classList.add('active');
-                }
-            });
-        }
-
-        prevButton.addEventListener('click', () => {
-            currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
-            changeSlide();
-        });
-
-        nextButton.addEventListener('click', () => {
-            currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
-            changeSlide();
-        });
-
-        changeSlide(); // Initialize the carousel on page load
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
