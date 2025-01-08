@@ -1,4 +1,3 @@
-// JavaScript for the carousel functionality
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slides .slide');
 const prevButton = document.getElementById('prev-btn');
@@ -8,10 +7,7 @@ let slideInterval;
 // Function to change the slide
 function changeSlide() {
     slides.forEach((slide, index) => {
-        slide.classList.remove('active');
-        if (index === currentSlide) {
-            slide.classList.add('active');
-        }
+        slide.style.display = index === currentSlide ? 'block' : 'none';
     });
 }
 
@@ -44,6 +40,7 @@ nextButton.addEventListener('click', () => {
 });
 
 // Initialize the carousel on page load
+changeSlide();
 startSlideInterval();
 
 // Event listeners for "Buy Now" buttons
